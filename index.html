@@ -1,86 +1,190 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BEAM Team — Biomedical Engineering, Acoustics & Multimodality. An academic interest community in biomedical engineering, acoustic technologies, and multimodal research.">
-  <meta name="theme-color" content="#0a1b2e">
-  <title>BEAM Team | Biomedical Engineering, Acoustics & Multimodality</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <style>
-    :root{--navy:#0a1b2e;--navy2:#10283e;--ink:#172738;--muted:#596c7d;--edge:#e1e9ee;--soft:#f5f8fa;--teal:#147d8a;--cyan:#63d4d0;--white:#fff}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65}a{text-decoration:none;color:inherit}a:focus-visible{outline:3px solid #5ed1d0;outline-offset:4px}section[id]{scroll-margin-top:88px}
-    .wrap{width:min(1100px,calc(100% - 48px));margin:0 auto}.top{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;gap:11px;align-items:center;font-weight:800;letter-spacing:.01em;color:var(--navy);font-size:19px}.brand svg{height:36px;width:36px;flex:0 0 36px}.nav{display:flex;gap:29px;font-size:14px;font-weight:650;color:#556576}.nav a:hover{color:var(--teal)}
-    .hero{background:var(--navy);color:var(--white);overflow:hidden;position:relative}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 45%,#1b597255 0,transparent 46%);pointer-events:none}.hero-inner{min-height:500px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;position:relative;padding:75px 0}.eyebrow{font-size:12px;letter-spacing:.19em;text-transform:uppercase;font-weight:750;color:var(--cyan)}h1{font-size:clamp(38px,5vw,62px);line-height:1.11;letter-spacing:-.047em;margin:19px 0 12px;font-weight:820}h1 em{font-style:normal;color:#77ddd9}.fullname{font-size:clamp(17px,1.8vw,21px);font-weight:580;margin:0 0 20px;color:#e5f5f5}.intro{color:#b8cbd4;max-width:560px;font-size:16px;margin:0 0 27px}.tags{display:flex;flex-wrap:wrap;gap:9px}.tag{color:#c9e8e9;border:1px solid #3a586a;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600}.hero-art{display:flex;justify-content:center;align-items:center;min-height:300px}.hero-art svg{width:min(100%,460px);max-height:410px}
-    .section{padding:78px 0}.kicker{font-size:12px;letter-spacing:.13em;color:var(--teal);text-transform:uppercase;font-weight:800;margin:0 0 9px}h2{font-size:clamp(27px,3vw,36px);letter-spacing:-.03em;line-height:1.24;color:var(--navy);margin:0 0 16px}.lead{font-size:17px;color:var(--muted);max-width:780px;margin:0;line-height:1.8}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-note{background:var(--soft);border-left:3px solid var(--teal);padding:26px 29px;border-radius:0 12px 12px 0;color:#4d6474}.about-note strong{color:var(--navy);display:block;margin-bottom:8px}.subtle{background:var(--soft)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:31px}.card{padding:25px 22px 23px;border:1px solid var(--edge);background:white;border-radius:12px;min-height:200px}.count{font-size:12px;letter-spacing:.12em;color:var(--teal);font-weight:850}.card h3{font-size:18px;line-height:1.33;margin:16px 0 9px;color:var(--navy)}.card p{font-size:14px;color:var(--muted);line-height:1.7;margin:0}.activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:24px}.activity{border-top:2px solid #c9dfe2;padding-top:18px}.activity h3{font-size:18px;margin:0 0 7px;color:var(--navy)}.activity p{font-size:14px;color:var(--muted);margin:0}.contact{background:#10283e;color:white;padding:63px 0}.contact-grid{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{color:white}.contact p{color:#b3c9d0;margin:0}.link-btn{display:inline-flex;align-items:center;gap:9px;background:#def8f4;color:#0b3742;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:750;white-space:nowrap}.link-btn:hover{background:white}.footer{padding:20px 0;background:#0a1b2e;color:#a6bdc8;font-size:12px}.footer-inner{display:flex;gap:15px;align-items:center;justify-content:space-between}
-    @media(max-width:800px){.hero-inner{grid-template-columns:1fr;padding:60px 0 32px}.hero-art{min-height:190px}.hero-art svg{max-height:240px}.cards{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:24px}.activity-grid{gap:18px}.nav{gap:14px}}
-    @media(max-width:520px){.wrap{width:min(100% - 32px,1100px)}.top{height:auto;padding:17px 0;align-items:flex-start;flex-direction:column;gap:12px}.nav{font-size:12px;gap:19px;flex-wrap:wrap}.hero-inner{padding:48px 0 24px}.hero-art{min-height:150px}.hero-art svg{max-height:190px}h1{font-size:44px}.section{padding:56px 0}.cards,.activity-grid{grid-template-columns:1fr}.card{min-height:auto}.contact-grid,.footer-inner{align-items:flex-start;flex-direction:column;gap:18px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#f7f8f5" />
+  <meta name="description" content="NIU Team is an academic research community at Beihang University working across biomedical engineering, acoustics, and multimodal technologies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NIU Team · Beihang University" />
+  <meta property="og:description" content="Biomedical Engineering · Acoustics · Multimodal Technologies" />
+  <title>NIU Team | Biomedical Engineering · Acoustics · Multimodal Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="wrap top">
-    <a class="brand" href="#home" aria-label="BEAM Team home">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0a1b2e"/><path d="M6 21h7l4-9 6 18 4-9h7" stroke="#77ddd9" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" fill="none"/></svg>
-      BEAM <span style="font-weight:500;color:#637789">Team</span>
-    </a>
-    <nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#interests">Interests</a><a href="#activities">Activities</a><a href="#contact">Contact</a></nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="NIU Team, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 27V13L14 27V13M21 13V27M27 13V22.2C27 28.1 35 28.1 35 22.2V13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 33H33" stroke="currentColor" stroke-opacity=".48" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="brand-type"><strong>NIU</strong><span>TEAM</span></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#community">Community</a>
+        <a href="#connect" class="nav-contact">Connect <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#community">Community</a>
+      <a href="#connect">Connect</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="wrap hero-inner">
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> An academic research community · Beihang University</p>
+        <h1 id="hero-heading">Explore the <em>signal.</em><br/>Understand the <em>human.</em></h1>
+        <p class="hero-lead">We connect biomedical engineering, acoustics, and multimodal technologies to explore how physiological signals can inform sensing, imaging, and human-centered interfaces.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#research">Explore our interests <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#about">Meet NIU Team <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-tags" aria-label="Core fields">
+          <span>Biomedical Engineering</span>
+          <span>Acoustics</span>
+          <span>Multimodal Technologies</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-head">
+          <span>NIU / SIGNAL EXPLORATIONS</span>
+          <span>01 — 03</span>
+        </div>
+        <svg class="signal-graphic" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="line-shade" x1="0" y1="0" x2="600" y2="500" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#B9DCE0"/><stop offset="0.6" stop-color="#FAF1D5"/><stop offset="1" stop-color="#F2AF83"/>
+            </linearGradient>
+            <clipPath id="clip"><rect x="25" y="15" width="550" height="460" rx="10"/></clipPath>
+          </defs>
+          <g stroke="#D7E7E1" stroke-width="1">
+            <path d="M0 60H600M0 120H600M0 180H600M0 240H600M0 300H600M0 360H600M0 420H600"/>
+            <path d="M60 0V500M120 0V500M180 0V500M240 0V500M300 0V500M360 0V500M420 0V500M480 0V500M540 0V500"/>
+          </g>
+          <circle cx="300" cy="248" r="202" stroke="#E4E3D6" stroke-width="1.3"/>
+          <circle cx="300" cy="248" r="157" stroke="#D8DDD4" stroke-width="1.3"/>
+          <circle cx="300" cy="248" r="111" stroke="#D8DDD4" stroke-width="1.3"/>
+          <circle cx="300" cy="248" r="58" stroke="#D8DDD4" stroke-width="1.3"/>
+          <g clip-path="url(#clip)">
+            <path d="M-10 270 C40 270 48 270 79 268 C95 265 105 238 115 239 C124 240 130 294 140 295 C152 296 154 211 167 210 C182 209 182 328 196 330 C208 332 214 161 227 158 C240 155 243 354 256 354 C268 354 275 105 290 105 C305 105 308 388 322 388 C336 388 339 148 353 147 C367 146 373 326 386 327 C400 328 403 208 415 208 C428 208 430 297 441 297 C454 297 461 251 474 250 C490 249 496 267 512 268 C528 269 550 269 610 269" stroke="url(#line-shade)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M-10 270 C40 270 48 270 79 268 C95 265 105 238 115 239 C124 240 130 294 140 295 C152 296 154 211 167 210 C182 209 182 328 196 330 C208 332 214 161 227 158 C240 155 243 354 256 354 C268 354 275 105 290 105 C305 105 308 388 322 388 C336 388 339 148 353 147 C367 146 373 326 386 327 C400 328 403 208 415 208 C428 208 430 297 441 297 C454 297 461 251 474 250 C490 249 496 267 512 268 C528 269 550 269 610 269" stroke="#2A6E6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <circle cx="290" cy="105" r="6" fill="#E28C60" stroke="#F7F8F5" stroke-width="3"/>
+          <circle cx="353" cy="147" r="5" fill="#2A6E6F" stroke="#F7F8F5" stroke-width="3"/>
+          <path d="M290 105V46H398" stroke="#A2B8AC" stroke-dasharray="4 5"/>
+          <text x="403" y="51" font-size="12" letter-spacing="2" fill="#69837C">ACOUSTICS</text>
+          <path d="M353 147L410 104H524" stroke="#A2B8AC" stroke-dasharray="4 5"/>
+          <text x="461" y="99" font-size="12" letter-spacing="2" fill="#69837C">SENSING</text>
+          <text x="30" y="458" font-size="12" letter-spacing="2.4" fill="#769188">SIGNAL / MOTION / INTERFACE</text>
+        </svg>
+        <div class="visual-bottom"><span>A thoughtful approach to complex signals.</span><span class="round-cross">✳</span></div>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="Team vision">
+      <div class="container strip-inner">
+        <span class="strip-label">OUR PERSPECTIVE</span>
+        <p>Bridging <strong>engineering methods</strong> and <strong>human physiology</strong> through acoustic and multimodal sensing.</p>
+        <span class="strip-symbol" aria-hidden="true">✳</span>
+      </div>
+    </section>
+
+    <section id="about" class="section container about-section">
+      <div class="section-heading">
+        <span class="section-index">01 / ABOUT</span>
+        <h2>A community built around<br/>questions worth exploring.</h2>
+      </div>
+      <div class="about-body">
+        <p><strong>NIU Team</strong> is an academic research community at <strong>Beihang University</strong>, with interests spanning biomedical engineering, acoustics, and multimodal technologies.</p>
+        <p>We value interdisciplinary exchange and careful experimentation. By bringing together ideas from signal processing, medical imaging, sensing, and speech technologies, we explore how research methods can connect to real human needs.</p>
+        <div class="about-location"><span class="tiny-circle"></span> Based in Beijing, China <span class="separator">·</span> Beihang University</div>
+      </div>
+    </section>
+
+    <section id="research" class="section research-section">
+      <div class="container">
+        <div class="section-topline">
+          <span class="section-index">02 / RESEARCH INTERESTS</span>
+          <span class="section-aside">Our focus areas</span>
+        </div>
+        <h2>Different signals.<br/><em>Shared curiosity.</em></h2>
+        <p class="section-description">Our interests bring together measurement, interpretation, and technology development across multiple research domains.</p>
+        <div class="research-grid">
+          <article class="research-card">
+            <div class="research-card-top"><span>01</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30C13 30 13 18 18 18S23 36 28 36 33 12 38 12"/><path d="M8 41H40M8 7V41"/></svg></div>
+            <h3>Biomedical Acoustics<br/>&amp; Ultrasound</h3>
+            <p>Exploring acoustic methods, ultrasound imaging, and sensing technologies for biomedical applications.</p>
+          </article>
+          <article class="research-card">
+            <div class="research-card-top"><span>02</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 25H13L18 12 25 37 31 20 35 25H42"/><path d="M6 41H42"/></svg></div>
+            <h3>Physiological Signal<br/>Processing</h3>
+            <p>Understanding information encoded in biosignals and developing methods to analyze complex physiological dynamics.</p>
+          </article>
+          <article class="research-card">
+            <div class="research-card-top"><span>03</span><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="13" r="5"/><circle cx="36" cy="13" r="5"/><circle cx="24" cy="35" r="5"/><path d="M16 16 21 30M32 16 27 30M17 13H31"/></svg></div>
+            <h3>Multimodal Sensing<br/>&amp; Interfaces</h3>
+            <p>Combining complementary sensing modalities to support richer interpretation and human-centered interfaces.</p>
+          </article>
+          <article class="research-card">
+            <div class="research-card-top"><span>04</span><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="18" y="7" width="12" height="23" rx="6"/><path d="M12 23C12 38 36 38 36 23M24 35V42M17 42H31"/></svg></div>
+            <h3>Speech &amp; Assistive<br/>Communication</h3>
+            <p>Investigating physiological information related to speech and potential technologies for accessible communication.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="section community-section">
+      <div class="container community-inner">
         <div>
-          <div class="eyebrow">Academic interest community · Beihang University</div>
-          <h1>Ideas in motion.<br><em>Signals in focus.</em></h1>
-          <p class="fullname">Biomedical Engineering, Acoustics &amp; Multimodality</p>
-          <p class="intro">BEAM Team brings together academic interests at the intersection of life sciences, acoustics, intelligent sensing, and multidisciplinary engineering.</p>
-          <div class="tags"><span class="tag">Biomedical Engineering</span><span class="tag">Acoustics</span><span class="tag">Multimodal Research</span></div>
+          <span class="section-index light-index">03 / OUR COMMUNITY</span>
+          <h2>Learn together.<br/><em>Think independently.</em></h2>
+          <p>Beyond individual projects, we aim to create a supportive environment for students to share knowledge, sharpen research skills, and learn from one another.</p>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 480 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><radialGradient id="glow"><stop stop-color="#59CFCB" stop-opacity=".22"/><stop offset="1" stop-color="#59CFCB" stop-opacity="0"/></radialGradient><linearGradient id="wave" x1="35" y1="0" x2="446" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#4AD4D5" stop-opacity=".02"/><stop offset=".45" stop-color="#76EEE5"/><stop offset="1" stop-color="#4AD4D5" stop-opacity=".15"/></linearGradient></defs>
-            <circle cx="240" cy="210" r="193" fill="url(#glow)"/><circle cx="240" cy="210" r="165" stroke="#6ACECF" opacity=".11"/><circle cx="240" cy="210" r="127" stroke="#6ACECF" opacity=".16"/><circle cx="240" cy="210" r="89" stroke="#6ACECF" opacity=".23"/><circle cx="240" cy="210" r="51" stroke="#6ACECF" opacity=".33"/>
-            <path d="M14 210H74l18-32 18 73 21-100 19 58 20-19 18 13 20-75 23 151 26-169 22 114 19-42 23 27h28l18-30 17 31h58" stroke="url(#wave)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <g fill="#82E7DE"><circle cx="240" cy="210" r="5"/><circle cx="151" cy="210" r="3" opacity=".65"/><circle cx="329" cy="210" r="3" opacity=".65"/></g>
-            <text x="240" y="379" text-anchor="middle" fill="#9FC8D0" font-size="12" font-family="sans-serif" letter-spacing="5">BEAM TEAM</text>
-          </svg>
+        <div class="community-list">
+          <div class="community-item"><span>01</span><div><h3>Journal clubs &amp; reading</h3><p>Exploring scientific literature and discussing methods and ideas.</p></div></div>
+          <div class="community-item"><span>02</span><div><h3>Research skills exchange</h3><p>Sharing practical workflows, technical skills, and learning resources.</p></div></div>
+          <div class="community-item"><span>03</span><div><h3>Interdisciplinary discussions</h3><p>Connecting perspectives across engineering and biomedical science.</p></div></div>
+          <div class="community-item"><span>04</span><div><h3>Collaborative learning</h3><p>Building an open culture of peer feedback, exploration, and growth.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="wrap about-grid">
-        <div><p class="kicker">01 / About</p><h2>Curiosity across disciplines</h2><p class="lead">BEAM Team is an academic interest group associated with the Beihang University academic community. We aim to encourage peer learning, open discussions, knowledge sharing, and exploration of emerging technologies in biomedical engineering.</p></div>
-        <div class="about-note"><strong>Our perspective</strong>Meaningful ideas often emerge at the boundaries between fields. We are interested in understanding biological systems through signals, waves, imaging, and computational methods.</div>
-      </div>
-    </section>
-
-    <section class="section subtle" id="interests">
-      <div class="wrap"><p class="kicker">02 / Research Interests</p><h2>What we explore</h2><p class="lead">Our academic interests span sensing, signal analysis, imaging, and intelligent interfaces for health and communication.</p>
-        <div class="cards">
-          <article class="card"><div class="count">01</div><h3>Biomedical Acoustics</h3><p>Acoustic sensing and the interaction of sound waves with biological systems.</p></article>
-          <article class="card"><div class="count">02</div><h3>Ultrasound &amp; Imaging</h3><p>Ultrasound methods, image formation, and wearable imaging technologies.</p></article>
-          <article class="card"><div class="count">03</div><h3>Physiological Signals</h3><p>Acquisition, processing, and interpretation of human physiological signals.</p></article>
-          <article class="card"><div class="count">04</div><h3>Multimodal Interfaces</h3><p>Intelligent sensing, speech-related technologies, and multimodal learning.</p></article>
+    <section id="connect" class="section container connect-section">
+      <span class="section-index">04 / CONNECT</span>
+      <div class="connect-content">
+        <h2>Good research starts<br/>with a <em>conversation.</em></h2>
+        <div class="connect-right">
+          <p>Interested in biomedical acoustics, multimodal sensing, or academic exchange? Follow our work and resources as the community grows.</p>
+          <a class="button button-primary org-url" href="https://github.com/" target="_blank" rel="noopener noreferrer">Find us on GitHub <span aria-hidden="true">↗</span></a>
+          <p class="contact-note">Beihang University · Beijing, China</p>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="activities">
-      <div class="wrap"><p class="kicker">03 / Activities</p><h2>Learn, share, collaborate</h2><p class="lead">The group is designed to provide a collaborative environment for student-oriented academic activities.</p>
-        <div class="activity-grid">
-          <div class="activity"><h3>Literature Discussions</h3><p>Read and discuss papers, emerging topics, and foundational methods.</p></div>
-          <div class="activity"><h3>Skills &amp; Knowledge Sharing</h3><p>Exchange practical experience in data analysis, programming, and research tools.</p></div>
-          <div class="activity"><h3>Academic Exchange</h3><p>Connect ideas across disciplines through informal talks and peer discussion.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap contact-grid"><div><p class="kicker" style="color:#73dcd6">04 / Contact</p><h2>Connect with BEAM Team</h2><p>Beihang University · Beijing, China</p></div><a class="link-btn" href="https://github.com/beam-team-buaa" target="_blank" rel="noopener noreferrer">Visit our GitHub <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><span>© BEAM Team. Biomedical Engineering, Acoustics &amp; Multimodality.</span><span>Built with GitHub Pages</span></div></footer>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><strong>NIU Team</strong><span>Biomedical Engineering · Acoustics · Multimodal Technologies</span></div>
+      <span>© <span id="year">2026</span> NIU Team</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="assets/main.js" defer></script>
 </body>
 </html>
